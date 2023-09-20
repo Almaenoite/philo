@@ -6,7 +6,7 @@
 /*   By: tbae <tbae@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:36:01 by tbae              #+#    #+#             */
-/*   Updated: 2023/09/20 12:00:20 by tbae             ###   ########.fr       */
+/*   Updated: 2023/09/20 13:11:21 by tbae             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	init_philo(t_info *info)
 
 	idx = 0;
 	info->philo = calloc(sizeof(t_philo), info->nb_philo);
+	if (info->philo == NULL)
+		return (printf("Error : fail to malloc\n"), exit (EXIT_FAILURE));
 	while (idx < info->nb_philo)
 	{
 		pthread_mutex_init(&info->philo[idx].fork, NULL);
