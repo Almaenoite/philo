@@ -6,7 +6,7 @@
 /*   By: tbae <tbae@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:36:01 by tbae              #+#    #+#             */
-/*   Updated: 2023/09/19 23:07:22 by tbae             ###   ########.fr       */
+/*   Updated: 2023/09/20 11:44:28 by tbae             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	check_arg(char **av, int ac, t_info *info)
 		return (1);
 	if (!ft_check_val(av[4], info->time_to_sleep))
 		return (1);
-	if (ac == 6 && !ft_check_val(av[1], info->nb_philo))
+	if (ac == 6 && !ft_check_val(av[5], info->nb_philo))
 		return (1);
 	return (0);
 }
